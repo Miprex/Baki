@@ -22,7 +22,7 @@
             min-width: 100%;
             min-height: 100%;
             z-index: 0;
-            filter: brightness(0.5) blur(2px);
+            filter: brightness(0.5) blur(2px); /* Videoyu biraz yumuşattık */
             object-fit: cover;
         }
 
@@ -73,41 +73,4 @@
             padding: 5px 20px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
-            cursor: pointer; /* Tıklanabilir hissi vermek için */
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Arka Plan Videosu -->
-    <!-- Eğer videonun kendi sesi varsa ve onu oynatmak istiyorsan 'muted' ibaresini silebilirsin -->
-    <video autoplay loop muted id="bg-video">
-        <source src="video-dosyaniz.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="container">
-        <h1>Dünyanın En Güzeline...</h1>
-        <h2>Seni Çok Seviyorum</h2>
-        <!-- Kullanıcı buraya tıkladığında müzik başlayacak -->
-        <div id="plead-text" onclick="muzikCal()">Müziği Başlatmak İçin Tıkla 🎵</div>
-    </div>
-
-    <!-- Şarkı Dosyası (Buraya kendi müzik dosyanın yolunu yazmalısın) -->
-    <audio id="background-music" src="sarki-dosyaniz.mp3" loop></audio>
-
-    <script>
-        function muzikCal() {
-            var audio = document.getElementById("background-music");
-            audio.play().then(() => {
-                // Müzik başarıyla başladığında yazıyı değiştirebilir veya gizleyebilirsin
-                document.getElementById("plead-text").innerText = "Sihirli An başladı... ✨";
-            }).catch(error => {
-                console.log("Müzik çalınamadı:", error);
-            });
-        }
-    </script>
-
-</body>
-</html>
+        } Şarkı niye yok
